@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../../../assets/MainPage.jpg);
+  background-image: url(../../../assets/main.jpg);
   width: 100w;
   height: 100vh;
 }
@@ -12,11 +12,12 @@ form input {
   width: 35rem;
   height: 4rem;
   font-size: 1.6rem;
-  border-radius: 15px;
-  /* padding-left: 2px; */
+  border-radius: 20px;
+  border-style: hidden;
 }
 .submit {
-  background-color: rgb(58, 138, 204);
+  /* background-color: rgb(58, 138, 204); */
+  background-color: rgb(88, 140, 179);
   color: white;
 }
 
@@ -43,5 +44,10 @@ header {
   font-size: 3rem;
   font-weight: bold;
   color: rgb(0, 0, 0);
-  text-shadow: 3px 3px rgb(58, 138, 204);
+  /* text-shadow: 3px 3px rgb(58, 138, 204); */
+  text-shadow: 3px 3px rgb(88, 140, 179);
+}
+
+input:focus {
+  outline: none;
 }

@@ -1,4 +1,6 @@
-img {
-  width: 99vw;
-  height: 98vh;
+.main-page {
+  background-image: url(../../../assets/main.jpg);
+  background-repeat: repeat;
+  width: 100wh;
+  height: 100vh;
 }
