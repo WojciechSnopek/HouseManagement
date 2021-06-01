@@ -4,3 +4,26 @@
   width: 100wh;
   height: 100vh;
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: rgb(88, 140, 179);
+}
+mat-icon {
+  background-color: rgb(88, 140, 179);
+  color: white;
+}
+
+button {
+  background-color: rgb(88, 140, 179);
+  border: transparent;
+  cursor: pointer;
+}
+
+span {
+  padding: 0px 5px 0px 5px;
+  font-size: 1.5rem;
+}
