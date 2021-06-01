@@ -1,0 +1,47 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../assets/MainPage.jpg);
+  width: 100w;
+  height: 100vh;
+}
+
+form input {
+  width: 35rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border-radius: 15px;
+  /* padding-left: 2px; */
+}
+.submit {
+  background-color: rgb(58, 138, 204);
+  color: white;
+}
+
+.submit:hover {
+  background-color: rgb(20, 97, 160);
+  color: white;
+  cursor: pointer;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+input#login {
+  padding-left: 15px;
+}
+input#password {
+  padding-left: 15px;
+}
+
+header {
+  padding: 2.5%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px rgb(58, 138, 204);
+}
