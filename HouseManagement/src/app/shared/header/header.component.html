@@ -1,0 +1,36 @@
+<div class="header">
+  <p>
+    <mat-toolbar>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button [routerLink]="'/tasks'" mat-menu-item>
+          <mat-icon>assignment</mat-icon>
+            <span>
+              Tasks
+            </span>
+        </button>
+        <button [routerLink]="'/shopping-list'" mat-menu-item>
+          <mat-icon>add_shopping_cart</mat-icon>
+          <span>Shopping list</span>
+        </button>
+        <button [routerLink]="'/payment'" mat-menu-item>
+          <mat-icon>attach_money</mat-icon>
+          <span>Payments</span>
+        </button>
+      </mat-menu>
+      <button [routerLink]="'/home'" class="toolbar-buttons">
+        <span>
+          House Management
+        </span>
+      </button>
+      <span class="example-spacer"></span>
+      <button [routerLink]="'/login'" class="toolbar-buttons">
+        <span>
+          Login/Logout
+        </span>
+      </button>
+    </mat-toolbar>
+  </p>
+</div>

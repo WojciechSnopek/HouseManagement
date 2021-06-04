@@ -1,0 +1,10 @@
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../assets/main.jpg);
+  background-repeat: repeat;
+  width: 100wh;
+  height: 100vh;
+  font-size: 5rem;
+}
