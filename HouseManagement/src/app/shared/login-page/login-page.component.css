@@ -13,7 +13,8 @@ form input {
   height: 4rem;
   font-size: 1.6rem;
   border-radius: 20px;
-  border-style: hidden;
+  border-color: transparent;
+  /* border-style: hidden; */
 }
 .submit {
   /* background-color: rgb(58, 138, 204); */
@@ -49,4 +50,9 @@ header {
 
 input:focus {
   outline: none;
+}
+
+ng-invalid ng-touched {
+  border: 2px solid red;
+  color: red;
 }

@@ -1,12 +1,12 @@
 <div class="login-page">
   <header>House Management</header>
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onSubmit()">
       <div class="login-input-container">
-        <input type="text" id="login" name="login" placeholder="e-mail"><br><br>
-        <input type="password" id="password" name="password" placeholder="password"><br><br><br><br>
+        <input type="text" id="login" name="login" placeholder="e-mail" formControlName="email"><br><br>
+        <input type="password" id="password" name="password" placeholder="password" formControlName="password"><br><br><br><br>
       </div>
       <div class="submit-container">
-        <input type="button" value="Login" class="submit" (click)="login()">
+        <input type="submit" value="Login" class="submit" >
       </div>
     </form>
 </div>

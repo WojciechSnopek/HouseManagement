@@ -1,5 +1,6 @@
 import { AuthService } from './../../auth/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
@@ -8,13 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  // registerForm: FormGroup | undefined;
+
+  constructor(private auth: AuthService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
-  login(): void {
-    this.auth.login({ email: 'dupa', password: 'dupa' });
+  onSubmit(): void {
+    console.log(this.registerForm);
+    if (this.registerForm.invalid) {
+      console.log('invalid!');
+      return
+    }
+    else {
+      this.auth.login({ email: this.registerForm.value.email, password: this.registerForm.value.password });
+      // this.auth.login(JSON.stringify(this.registerForm.value));   // ?? czemu nie dziala
+      console.log('valid!');
+    }
   }
 
+  registerForm: FormGroup = this.formBuilder.group({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+  });
 }
