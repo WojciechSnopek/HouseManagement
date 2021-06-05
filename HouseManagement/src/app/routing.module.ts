@@ -8,11 +8,11 @@ import { LoginPageComponent } from './shared/login-page/login-page.component';
 import { HomeComponent } from './shared/home/home.component';
 
 const routes: Routes = [
-  { path: 'payment', component: PaymentComponent },
+  { path: 'payment', data: { header: true }, component: PaymentComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'tasks', component: TasksComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginPageComponent },
+  { path: 'home', data: { header: true }, component: HomeComponent },
+  { path: 'login', data: { header: false }, component: LoginPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent },
 ];
