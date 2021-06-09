@@ -9,11 +9,10 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 })
 export class LoginPageComponent implements OnInit {
 
-  // registerForm: FormGroup | undefined;
-
   constructor(private auth: AuthService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
   }
 
   onSubmit(): void {
@@ -24,8 +23,9 @@ export class LoginPageComponent implements OnInit {
     }
     else {
       this.auth.login({ email: this.registerForm.value.email, password: this.registerForm.value.password });
+
       // this.auth.login(JSON.stringify(this.registerForm.value));   // ?? czemu nie dziala
-      console.log('valid!');
+
     }
   }
 

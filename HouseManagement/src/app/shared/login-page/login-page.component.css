@@ -14,10 +14,8 @@ form input {
   font-size: 1.6rem;
   border-radius: 20px;
   border-color: transparent;
-  /* border-style: hidden; */
 }
 .submit {
-  /* background-color: rgb(58, 138, 204); */
   background-color: rgb(88, 140, 179);
   color: white;
 }
@@ -52,7 +50,10 @@ input:focus {
   outline: none;
 }
 
-ng-invalid ng-touched {
+input#login.ng-invalid.ng-touched {
   border: 2px solid red;
-  color: red;
+}
+
+input#password.ng-invalid.ng-touched {
+  border: 2px solid red;
 }

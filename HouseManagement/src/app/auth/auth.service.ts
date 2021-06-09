@@ -10,8 +10,8 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   constructor(private router: Router) {
-
   }
+
 
   private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
@@ -22,7 +22,8 @@ export class AuthService {
   public login(user: User): void {
     if (user.email !== '' && user.password !== '') {
       this.loggedIn.next(true);
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
+      console.log(user.email + " " + user.password);   // testy
     }
   }
 
