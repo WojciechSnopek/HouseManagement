@@ -29,6 +29,10 @@ export class LoginPageComponent implements OnInit {
     }
   }
 
+  get f() {
+    return this.registerForm.controls;
+  }
+
   registerForm: FormGroup = this.formBuilder.group({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
