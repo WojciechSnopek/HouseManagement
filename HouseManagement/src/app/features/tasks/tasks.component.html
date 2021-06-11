@@ -1,3 +1,8 @@
 <div class="tasks">
-  <p>tasks works!</p>
+  <ul *ngFor="let task of loadedTasks">
+    <li>Osoba odpowiedzialna: {{ task.person }}</li>
+    <li>Zadanie: {{ task.task }}</li>
+    <li>Ilość w tygodniu: {{ task.timesWeekly }}</li>
+    <br><br>
+  </ul>
 </div>

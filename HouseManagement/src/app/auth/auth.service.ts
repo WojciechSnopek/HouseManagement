@@ -23,7 +23,7 @@ export class AuthService {
     if (user.email !== '' && user.password !== '') {
       this.loggedIn.next(true);
       this.router.navigate(['/home']);
-      console.log(user.email + " " + user.password);   // testy
+      // console.log(user.email + " " + user.password);   // testy
     }
   }
 

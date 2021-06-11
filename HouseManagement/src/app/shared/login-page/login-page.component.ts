@@ -16,9 +16,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.registerForm);
     if (this.registerForm.invalid) {
-      console.log('invalid!');
       return
     }
     else {
